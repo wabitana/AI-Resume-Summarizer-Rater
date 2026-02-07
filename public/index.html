@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Resume Summarizer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    .card {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f9fafb;
+    }
+
+    .rating {
+      font-size: 28px;
+      font-weight: bold;
+      color: #16a34a;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .weakness {
+      color: #dc2626;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Resume Summarizer & Rater</h1>
+
+    <input type="file" id="resumeFile" accept=".pdf">
+    <button onclick="uploadResume()">Summarize & Rate</button>
+
+    <div id="loading" class="hidden">Processing...</div>
+
+    <div id="result" class="hidden">
+      <div class="card">
+        <h2>Summary</h2>
+        <p id="summary"></p>
+      </div>
+
+      <div class="card">
+        <h2>Rating</h2>
+        <div class="rating" id="rating"></div>
+      </div>
+
+      <div class="card">
+        <h2>Strengths</h2>
+        <ul id="strengths"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Weaknesses</h2>
+        <ul id="weaknesses"></ul>
+      </div>
+
+      <div class="card">
+        <h2>References</h2>
+        <ul id="references"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
